@@ -5,7 +5,6 @@
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var header = document.getElementById('siteHeader');
   var sticky = document.querySelector('.sticky-cta');
-  var hasGsap = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
 
   function scrollHandler() {
     var y = window.scrollY || window.pageYOffset;
@@ -32,47 +31,8 @@
     });
   });
 
-  if (reduced) {
+  if (reduced || !('IntersectionObserver' in window)) {
     doc.classList.add('no-anim');
-    return;
-  }
-
-  if (hasGsap) {
-    gsap.registerPlugin(ScrollTrigger);
-
-    document.querySelectorAll('[data-reveal]').forEach(function (el) {
-      var delay = parseFloat(el.getAttribute('data-delay') || '0') / 10;
-      gsap.fromTo(el, { autoAlpha: 0, y: 30 }, {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.85,
-        ease: 'power2.out',
-        delay: delay,
-        scrollTrigger: { trigger: el, start: 'top 86%', once: true }
-      });
-    });
-
-    document.querySelectorAll('[data-stagger]').forEach(function (group) {
-      gsap.fromTo(group.children, { autoAlpha: 0, y: 26 }, {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.7,
-        ease: 'power2.out',
-        stagger: 0.09,
-        scrollTrigger: { trigger: group, start: 'top 86%', once: true }
-      });
-    });
-
-    document.querySelectorAll('[data-parallax]').forEach(function (el) {
-      var amount = parseFloat(el.getAttribute('data-parallax') || '8');
-      gsap.fromTo(el, { y: amount }, {
-        y: amount * -1,
-        ease: 'none',
-        scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: 0.6 }
-      });
-    });
-
-    ScrollTrigger.refresh();
     return;
   }
 

@@ -16,12 +16,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" type="image/webp" href="assets/banner%20hero%20mobile-768.webp" imagesrcset="assets/banner%20hero%20mobile-480.webp 480w, assets/banner%20hero%20mobile-768.webp 768w" imagesizes="100vw" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="assets/banner%20hero%20desktop-1280.webp" imagesrcset="assets/banner%20hero%20desktop-1280.webp 1280w, assets/banner%20hero%20desktop.webp 1672w" imagesizes="58vw" media="(min-width: 768px)" fetchpriority="high">
 
-  <link rel="stylesheet" href="assets/css/styles.css?v=37">
+  <link rel="stylesheet" href="assets/css/styles.css?v=38">
   <script>document.documentElement.classList.add('js');</script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script defer src="assets/js/main.js?v=7"></script>
+  <script defer src="assets/js/main.js?v=8"></script>
 </head>
 <body id="topo">
 
@@ -29,7 +29,10 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a class="brand" href="#topo" aria-label="Shirley Oliveira - início">
-        <img src="assets/logo shirley.png" alt="Shirley Oliveira Nail Designer" width="2172" height="724">
+        <picture>
+          <source srcset="assets/logo%20shirley-480.webp" type="image/webp">
+          <img src="assets/logo shirley.png" alt="Shirley Oliveira Nail Designer" width="2172" height="724">
+        </picture>
       </a>
       <a class="btn btn-primary btn-sm header-cta" href="https://pay.hotmart.com/F97629991T" target="_blank" rel="noopener">Quero meu acesso</a>
     </div>
@@ -40,6 +43,8 @@
     <div class="hero-media">
       <div class="hero-img-wrap">
         <picture>
+          <source media="(min-width: 768px)" type="image/webp" srcset="assets/banner%20hero%20desktop-1280.webp 1280w, assets/banner%20hero%20desktop.webp 1672w" sizes="58vw">
+          <source media="(max-width: 767px)" type="image/webp" srcset="assets/banner%20hero%20mobile-480.webp 480w, assets/banner%20hero%20mobile-768.webp 768w" sizes="100vw">
           <source media="(min-width: 768px)" srcset="assets/banner%20hero%20desktop.png?v=2" width="1672" height="941">
           <img class="hero-img" src="assets/banner hero mobile.png" alt="Shirley Oliveira, nail designer e educadora" width="941" height="1672" loading="eager" fetchpriority="high" decoding="async">
         </picture>
@@ -175,7 +180,10 @@
       </div>
 
       <div class="mockup-zone" data-reveal>
-        <img class="course-mockup" src="assets/mockup curso.png" alt="Mockup do treinamento O Segredo do Banho de Gel Lucrativo no computador e no celular" width="1536" height="1024" loading="lazy" decoding="async">
+        <picture>
+          <source srcset="assets/mockup%20curso-768.webp" type="image/webp">
+          <img class="course-mockup" src="assets/mockup curso.png" alt="Mockup do treinamento O Segredo do Banho de Gel Lucrativo no computador e no celular" width="1536" height="1024" loading="lazy" decoding="async">
+        </picture>
 
         <div class="float-chip chip-1" data-parallax>✔ Melhor acabamento</div>
         <div class="float-chip chip-2" data-parallax>✔ Menos descolamento</div>
@@ -250,37 +258,37 @@
 
       <div class="results-gallery" data-reveal aria-label="Resultados visuais enviados pelas alunas">
         <figure class="result-item">
-          <img src="assets/resultados (1).jpeg" alt="Resultado de aluna com unhas vermelhas e detalhe dourado" width="1200" height="1600" loading="lazy" decoding="async">
+          <picture><source srcset="assets/resultados%20(1).webp" type="image/webp"><img src="assets/resultados (1).jpeg" alt="Resultado de aluna com unhas vermelhas e detalhe dourado" width="1200" height="1600" loading="lazy" decoding="async"></picture>
         </figure>
         <figure class="result-item">
-          <img src="assets/resultados (2).jpeg" alt="Resultado de aluna com unhas nude cintilantes e detalhe vermelho" width="1200" height="1600" loading="lazy" decoding="async">
+          <picture><source srcset="assets/resultados%20(2).webp" type="image/webp"><img src="assets/resultados (2).jpeg" alt="Resultado de aluna com unhas nude cintilantes e detalhe vermelho" width="1200" height="1600" loading="lazy" decoding="async"></picture>
         </figure>
         <figure class="result-item">
-          <img src="assets/resultados (3).jpeg" alt="Resultado de aluna com francesinha vermelha, dourado e pedrarias" width="1200" height="1600" loading="lazy" decoding="async">
+          <picture><source srcset="assets/resultados%20(3).webp" type="image/webp"><img src="assets/resultados (3).jpeg" alt="Resultado de aluna com francesinha vermelha, dourado e pedrarias" width="1200" height="1600" loading="lazy" decoding="async"></picture>
         </figure>
         <figure class="result-item">
-          <img src="assets/resultados (4).jpeg" alt="Resultado de aluna com esmaltação em gel rosa" width="1040" height="1078" loading="lazy" decoding="async">
+          <picture><source srcset="assets/resultados%20(4).webp" type="image/webp"><img src="assets/resultados (4).jpeg" alt="Resultado de aluna com esmaltação em gel rosa" width="1040" height="1078" loading="lazy" decoding="async"></picture>
         </figure>
         <figure class="result-item">
-          <img src="assets/resultados (5).jpeg" alt="Resultado de aluna com unhas nude e detalhes brilhantes" width="1200" height="1600" loading="lazy" decoding="async">
+          <picture><source srcset="assets/resultados%20(5).webp" type="image/webp"><img src="assets/resultados (5).jpeg" alt="Resultado de aluna com unhas nude e detalhes brilhantes" width="1200" height="1600" loading="lazy" decoding="async"></picture>
         </figure>
         <figure class="result-item">
-          <img src="assets/resultados (6).jpeg" alt="Resultado de aluna com esmaltação em gel rosa" width="899" height="1599" loading="lazy" decoding="async">
+          <picture><source srcset="assets/resultados%20(6).webp" type="image/webp"><img src="assets/resultados (6).jpeg" alt="Resultado de aluna com esmaltação em gel rosa" width="899" height="1599" loading="lazy" decoding="async"></picture>
         </figure>
         <figure class="result-item">
-          <img src="assets/resultados (7).jpeg" alt="Resultado de aluna com unhas pretas, nude e prata" width="960" height="1280" loading="lazy" decoding="async">
+          <picture><source srcset="assets/resultados%20(7).webp" type="image/webp"><img src="assets/resultados (7).jpeg" alt="Resultado de aluna com unhas pretas, nude e prata" width="960" height="1280" loading="lazy" decoding="async"></picture>
         </figure>
         <figure class="result-item">
-          <img src="assets/resultados (8).jpeg" alt="Resultado de aluna com blindagem e esmaltação vermelha" width="1046" height="1080" loading="lazy" decoding="async">
+          <picture><source srcset="assets/resultados%20(8).webp" type="image/webp"><img src="assets/resultados (8).jpeg" alt="Resultado de aluna com blindagem e esmaltação vermelha" width="1046" height="1080" loading="lazy" decoding="async"></picture>
         </figure>
         <figure class="result-item">
-          <img src="assets/resultados (9).jpeg" alt="Resultado de aluna com unhas coloridas em azul, verde e amarelo" width="1079" height="1052" loading="lazy" decoding="async">
+          <picture><source srcset="assets/resultados%20(9).webp" type="image/webp"><img src="assets/resultados (9).jpeg" alt="Resultado de aluna com unhas coloridas em azul, verde e amarelo" width="1079" height="1052" loading="lazy" decoding="async"></picture>
         </figure>
         <figure class="result-item">
-          <img src="assets/resultados (10).jpeg" alt="Resultado compartilhado por aluna com unhas vermelhas" width="976" height="1600" loading="lazy" decoding="async">
+          <picture><source srcset="assets/resultados%20(10).webp" type="image/webp"><img src="assets/resultados (10).jpeg" alt="Resultado compartilhado por aluna com unhas vermelhas" width="976" height="1600" loading="lazy" decoding="async"></picture>
         </figure>
         <figure class="result-item">
-          <img src="assets/resultados (11).jpeg" alt="Resultado de aluna com unhas nude peroladas" width="1082" height="1600" loading="lazy" decoding="async">
+          <picture><source srcset="assets/resultados%20(11).webp" type="image/webp"><img src="assets/resultados (11).jpeg" alt="Resultado de aluna com unhas nude peroladas" width="1082" height="1600" loading="lazy" decoding="async"></picture>
         </figure>
       </div>
 
@@ -447,7 +455,10 @@
     <div class="container">
       <div class="sobre-inner">
         <div class="sobre-media" data-reveal>
-          <img src="assets/imagem da profissional.png" alt="Shirley Oliveira, Nail Designer e Educadora" width="1122" height="1402" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="assets/imagem%20da%20profissional-768.webp" type="image/webp">
+            <img src="assets/imagem da profissional.png" alt="Shirley Oliveira, Nail Designer e Educadora" width="1122" height="1402" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="sobre-content">
           <p class="eyebrow" data-reveal>Sobre a sua professora</p>
@@ -461,7 +472,10 @@
           <p class="sobre-text" data-reveal>
             Seu ensino é elogiado por alunas pela clareza, praticidade e facilidade de aplicação.
           </p>
-          <img class="sobre-signature" src="assets/logo shirley.png" alt="Shirley Oliveira Nail Designer" width="2172" height="724" loading="lazy" decoding="async" data-reveal>
+          <picture data-reveal>
+            <source srcset="assets/logo%20shirley-480.webp" type="image/webp">
+            <img class="sobre-signature" src="assets/logo shirley.png" alt="Shirley Oliveira Nail Designer" width="2172" height="724" loading="lazy" decoding="async">
+          </picture>
           <div class="sobre-cta" data-reveal>
             <a class="btn btn-primary btn-lg" href="https://pay.hotmart.com/F97629991T" target="_blank" rel="noopener">Aprender com Shirley</a>
           </div>
@@ -606,7 +620,10 @@
       <div class="footer-main">
         <div class="footer-identity">
           <a class="footer-logo" href="#topo" aria-label="Shirley Oliveira - voltar ao início">
-            <img src="assets/logo shirley.png" alt="Shirley Oliveira Nail Designer" width="2172" height="724" loading="lazy" decoding="async">
+            <picture>
+              <source srcset="assets/logo%20shirley-480.webp" type="image/webp">
+              <img src="assets/logo shirley.png" alt="Shirley Oliveira Nail Designer" width="2172" height="724" loading="lazy" decoding="async">
+            </picture>
           </a>
           <p class="footer-role">Nail Designer &amp; Educadora</p>
           <p class="footer-tagline">Técnica, confiança e valorização profissional.</p>

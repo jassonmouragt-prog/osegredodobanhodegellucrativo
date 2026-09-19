@@ -39,7 +39,7 @@ body {
   overflow-x: clip;
 }
 
-img, svg, video { max-width: 100%; display: block; }
+img, picture, svg, video { max-width: 100%; display: block; }
 ul, ol { list-style: none; }
 a { color: inherit; }
 
@@ -809,6 +809,7 @@ h1, h2, h3, h4 {
   object-position: center top;
   border-radius: inherit;
 }
+.sobre-media picture { width: 100%; height: 100%; }
 .sobre-chips {
   display: flex;
   flex-wrap: wrap;
